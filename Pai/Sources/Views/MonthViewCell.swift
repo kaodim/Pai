@@ -42,7 +42,7 @@ final class MonthViewCell: UICollectionViewCell {
             label.backgroundColor = .white
             addSubview(label)
         }
-        dayCollectionView.frame = UIEdgeInsetsInsetRect(bounds, UIEdgeInsets(top: weekdaySymbolHeight, left: 0, bottom: 0, right: 0))
+        dayCollectionView.frame = bounds.inset(by: UIEdgeInsets(top: weekdaySymbolHeight, left: 0, bottom: 0, right: 0))
         addSubview(dayCollectionView)
     }
 

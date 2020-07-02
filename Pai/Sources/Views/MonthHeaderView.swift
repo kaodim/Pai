@@ -23,7 +23,7 @@ final class MonthHeaderView: UICollectionReusableView {
     override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = PaiStyle.shared.monthItemHeaderBackgroundColor
-        symbolLabel.frame = UIEdgeInsetsInsetRect(bounds, UIEdgeInsets(top: 0, left: 15.0, bottom: 0, right: 15.0))
+        symbolLabel.frame = bounds.inset(by: UIEdgeInsets(top: 0, left: 15.0, bottom: 0, right: 15.0))
         addSubview(symbolLabel)
     }
 

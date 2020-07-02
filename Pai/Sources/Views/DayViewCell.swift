@@ -67,7 +67,7 @@ final class DayViewCell: UICollectionViewCell {
         topLine.backgroundColor = UIColor.clear.cgColor
         layer.addSublayer(topLine)
 
-        let labelFrame = UIEdgeInsetsInsetRect(bounds, PaiStyle.shared.dateItemDayLabelInset)
+        let labelFrame = bounds.inset(by: PaiStyle.shared.dateItemDayLabelInset)
         todayIndicator.frame = labelFrame
         todayIndicator.cornerRadius = todayIndicator.frame.height * 0.5
         layer.addSublayer(todayIndicator)

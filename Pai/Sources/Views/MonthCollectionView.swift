@@ -47,7 +47,7 @@ public class MonthCollectionView: UICollectionView {
     private func sharedInit(calendarDataSource: PaiCalendarDataSource? = nil) {
         /// Setup UI
         register(cellWithClass: MonthViewCell.self)
-        register(supplementaryViewOfKind: UICollectionElementKindSectionHeader, withClass: MonthHeaderView.self)
+        register(supplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withClass: MonthHeaderView.self)
         backgroundColor = UIColor.groupTableViewBackground
         translatesAutoresizingMaskIntoConstraints = false
         delegate = self
@@ -169,7 +169,7 @@ extension MonthCollectionView: UICollectionViewDataSource, UICollectionViewDeleg
 
     public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind:
-            UICollectionElementKindSectionHeader,
+            UICollectionView.elementKindSectionHeader,
                                                                                withClass: MonthHeaderView.self,
                                                                                for: indexPath)
             else {
